@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Remote Browsers" parallel="tests" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utility.RetryListener"/>
+        <listener class-name="utility.backupReportListener.ExtentTestNgFormatter" />
+    </listeners>
+
+    <test name="Chrome Test" parallel="classes" thread-count="3">
+        <parameter name="config" value=""/>
+        <parameter name="environment" value="Desktop_Remote_Chrome"/>
+        <groups>
+            <run>
+                <include name="functional"/>
+                <include name="validFlightRegistration"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="automation.tests.exampleSuite"/>
+        </packages>
+        <!--        <classes>-->
+        <!--            <class name="automation.tests.selenium.CoinFlipTests1"/>-->
+        <!--        </classes>-->
+    </test>
+
+    <test name="Firefox Test" parallel="classes" thread-count="3">
+        <parameter name="config" value=""/>
+        <parameter name="environment" value="Desktop_Remote_Firefox"/>
+        <groups>
+            <run>
+                <include name="functional"/>
+                <include name="validFlightRegistration"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="automation.tests.exampleSuite"/>
+        </packages>
+        <!--        <classes>-->
+        <!--            <class name="automation.tests.selenium.CoinFlipTests1"/>-->
+        <!--        </classes>-->
+
+    </test>
+
+</suite>
