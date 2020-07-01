@@ -13,7 +13,7 @@
     <jre.level>1.8</jre.level>
     <jdk.level>1.8</jdk.level>
     <!-- Dependencies version -->
-    <log4j-version>2.13.1</log4j-version>
+    <log4j-version>2.13.3</log4j-version>
     <poi-version>3.13</poi-version>
 </properties>
 
